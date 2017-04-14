@@ -19,7 +19,9 @@ security:
             provider: fos_userbundle
             form_login:
                 csrf_token_generator: security.csrf.token_manager
-            logout:       true
+                default_target_path: /profile
+            logout:
+                target: /login
             anonymous:    true
 
     access_control:
