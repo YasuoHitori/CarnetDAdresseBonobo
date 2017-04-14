@@ -107,4 +107,9 @@ class User extends BaseUser
     {
         return $this->friend;
     }
+
+    public function getParent()
+    {
+        return 'FOSUserBundle';
+    }
 }
