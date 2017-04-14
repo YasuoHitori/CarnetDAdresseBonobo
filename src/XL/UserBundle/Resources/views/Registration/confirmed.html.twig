@@ -3,6 +3,9 @@
 {% trans_default_domain 'XLUserBundle' %}
 
 {% block fos_user_content %}
+    <a href="{{ path('fos_user_profile_show') }}">
+        {{ 'Profil' }}
+    </a>
     <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
     {% if targetUrl %}
         <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
