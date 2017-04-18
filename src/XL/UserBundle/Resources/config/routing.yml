@@ -1,0 +1,14 @@
+xl_friend_home:
+    path:     /friend
+    defaults:
+        _controller: XLUserBundle:Friend:index
+
+xl_friend_add:
+    path:     /friend/add/{id}
+    defaults:
+        _controller: XLUserBundle:Friend:addFriend
+
+xl_friend_delete:
+    path:     /friend/delete/{id}
+    defaults:
+        _controller: XLUserBundle:Friend:deleteFriend

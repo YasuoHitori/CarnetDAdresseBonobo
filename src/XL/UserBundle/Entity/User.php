@@ -29,6 +29,9 @@ class User extends BaseUser
      * @ORM\Column(type="string", nullable=true)
      */
     protected $family;
+    /**
+     * @ORM\ManyToMany(targetEntity="XL\UserBundle\Entity\User", cascade={"persist"})
+     */
     protected $friend;
     /**
      * @ORM\Column(type="string", nullable=true)
@@ -115,7 +118,12 @@ class User extends BaseUser
         $this->friend->removeElement($toRemove);
     }
 
-    public function getFriend()
+    public function getFriends()
+    {
+        return $this->friend;
+    }
+
+    public function getfriend()
     {
         return $this->friend;
     }

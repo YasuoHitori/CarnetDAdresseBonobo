@@ -1,6 +1,11 @@
 {% trans_default_domain 'XLUserBundle' %}
 
 <div class="fos_user_user_show">
+
+    <a href="{{ path('xl_friend_home') }}">
+        {{ 'Friend' }}
+    </a>
+
     <p>{{ 'profile.show.username'|trans({}, 'FOSUserBundle') }}: {{ user.username }}</p>
     <p>{{ 'Family' }}: {{ user.family }}</p>
     <p>{{ 'Age' }}: {{ user.age }} {{ ' years' }}</p>
