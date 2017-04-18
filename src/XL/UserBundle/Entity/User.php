@@ -21,10 +21,22 @@ class User extends BaseUser
 
     protected $id;
     protected $name;
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
     protected $age;
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
     protected $family;
     protected $friend;
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
     protected $race;
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
     protected $food;
 
     public function __construct()

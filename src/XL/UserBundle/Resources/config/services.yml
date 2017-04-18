@@ -1,0 +1,6 @@
+services:
+    xl_user.profile.form.type:
+        class: XL\UserBundle\Form\Type\ProfileFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: xl_user_profile }
